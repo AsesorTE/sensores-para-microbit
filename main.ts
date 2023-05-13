@@ -21,9 +21,10 @@ basic.forever(function () {
         basic.pause(200)
         tinkercademy.LED(DigitalPin.P1, OnOff.Off)
     }
-    if (Environment.ReadNoise(AnalogPin.P3) > 50) {
+    if (Environment.ReadNoise(AnalogPin.P3) > 60) {
         tinkercademy.LED(DigitalPin.P2, OnOff.On)
         basic.pause(200)
         tinkercademy.LED(DigitalPin.P2, OnOff.Off)
+        music.playTone(988, music.beat(BeatFraction.Whole))
     }
 })
